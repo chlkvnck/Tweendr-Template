@@ -190,7 +190,7 @@ function createTweetElement(tweet) {
   
   const cats = gen('div', { className: 'category-buttons' });
   const goodBtn = gen('button', { className: 'category-button good', textContent: 'GOOD', disabled: tweet.isGood === true });
-  const badBtn = gen('button', { className: 'category-button bad', textContent: 'BAD!', disabled: tweet.isGood === false });
+  const badBtn = gen('button', { className: 'category-button bad', textContent: 'BAD', disabled: tweet.isGood === false });
   goodBtn.onclick = async () => { await categorizeTweet(tweet, true, frame); };
   badBtn.onclick = async () => { await categorizeTweet(tweet, false, frame); };
   cats.appendChild(goodBtn);
